@@ -1,16 +1,19 @@
 esun_fintech
-# 5/5
+# 5/5 會議記錄
 
 ## dirty data 分佈
-
+> 類別分類如下
+> isnull定義: 分辨不出來，則為isnull
 1. 含非字的線: 32
 2. 非白色背景:
 3. 字被印章蓋過: 981
 4. 兩個字在同張圖: 121
-5. other
+5. 簡體字型:
+6. 自行定義:
+7. 自行定義:
 
 ### Clean data
-> isnull定義: 分辨不出來，則為isnull
+
 1. 紀錄dirty data
 2. 改label, isnull
 
@@ -26,6 +29,16 @@ esun_fintech
 * Kai 50001 - 60000
 * Cheng 60000 - last
 
-
 ## Model 
 1. AI-free
+2. edge detection + model
+
+# 5/12
+
+待完成
+1. clean data
+2. model 自行嘗試
+   1. edge detection + model
+
+待討論
+1. 資料前處理 pipeline
