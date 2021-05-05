@@ -28,4 +28,4 @@ esun_fintech
 
 
 ## Model 
-1. 
+1. AI-free
