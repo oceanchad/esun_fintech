@@ -1,10 +1,4 @@
 esun_fintech
-
-# 5/18 會議記錄
-1. 23號之前將clean data number紀錄至train folder內的readme
-2. 自行嘗試model，評估效能
-
-
 # 5/5 會議記錄
 
 ## dirty data 分佈
@@ -48,11 +42,16 @@ esun_fintech
 待討論
 1. 資料前處理 pipeline
 
-# 5/18
-## [改label]
+
+# 5/18 會議記錄
+1. 23號之前將clean data number紀錄至train folder內的readme
+2. 自行嘗試model，評估效能
+
+## Label分類
+### [改label]
 * 因為Label錯誤
 * 因為label錯誤且為1.5個字
-## [改成isnull]
+### [改成isnull]
 * 因為有2個字
 * 因為只有線條
 * 因為線條遮到
@@ -61,7 +60,7 @@ esun_fintech
 * 因為看不出來是什麼
 * 因為紅底沒字
 * 因為黑底
-## [沒改]
+### [沒改]
 * 為簡體字
 * 1.5個字
 * 有其他線條
