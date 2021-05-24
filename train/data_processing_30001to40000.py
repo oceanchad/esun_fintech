@@ -49,7 +49,7 @@ def main():
 
     empty_flag = 0
     while(empty_flag == 0):
-        empty_flag = input("對於空的圖片，使用isnull標籤(輸入1)還是直接刪掉(輸入2)? ")
+        empty_flag = input("對於空的圖片，使用isnull標籤(輸入1)還是直接刪掉(不進垃圾桶)(輸入2)? ")
         if not (empty_flag == '1' or empty_flag == '2'):
             print("無效的輸入，請輸入1或2")
             empty_flag = 0
@@ -125,13 +125,17 @@ def main():
         new_char = wrong_labels.get(index_num, None)
         if new_char != None:
             new_name = index + '_' + new_char + '.jpg'
+
+        if empty_flag == 2 and index_num in empty:
+            os.remove(original_f)
             
         if new_name != None:
             processed_file_num += 1
             new_f = os.path.join(cwd, new_name)
-            os.rename(original_f, new_f)
+            os.rename(original_f, new_f) # use this line if you want to rename file names
+            # print(new_f) # use this line if you want a list of changed files
             
-    print(f"{processed_file_num} have been processed!")
+    print(f"{processed_file_num} files have been processed!")
     print("Remember to manually rotate images with these indices: 1595,3933,6261,7243,8642.")
             
 if __name__ == "__main__":
