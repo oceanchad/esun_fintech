@@ -15,7 +15,7 @@ import torchvision.transforms as transforms
 from model import Classifier
 from PIL import Image
 import torch.nn as nn
-
+import multiprocessing
 
 app = Flask(__name__)
 
@@ -155,5 +155,5 @@ if __name__ == "__main__":
     arg_parser.add_argument('-d', '--debug', default=True, help='debug')
     options = arg_parser.parse_args()
 
-    app.run(host='0.0.0.0', port=options.port, debug=options.debug)
+    app.run(host='0.0.0.0', port=options.port, debug=options.debug, threaded=True)
     
