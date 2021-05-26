@@ -6,6 +6,7 @@
 
 ## 5/26
 :trophy: [solved] 5/25 1. 2.
+
 :exclamation: 待解決問題
 1. model accuracy 不夠 :dash:  結果為 0.787 acc
 
