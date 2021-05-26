@@ -1,7 +1,32 @@
-esun_fintech
-# 5/5 會議記錄
+# esun_fintech
 
-## dirty data 分佈
+:rocket: rank: 43
+
+
+## 5/26
+:exclamation: 待解決問題
+
+1. connection fail issue :dash:  近8000筆資料 :point_right: 1058筆connection fail / 6663筆成功 [見log檔](https://docs.google.com/spreadsheets/d/1MOVoaUy45of2n_W1WR_OtxHR-_iFLVQtZrdvdR8Zoqg/edit#gid=244301917)
+2. model accuracy 不夠 :dash:  結果為 0.44 acc
+
+
+## 5/18 會議記錄
+1. 23號之前將clean data number紀錄至train folder內的[readme](https://github.com/oceanchad/esun_fintech/tree/main/train#label%E5%88%86%E9%A1%9E)
+2. 自行嘗試model，評估效能
+
+## 5/12 會議記錄
+
+待完成
+1. clean data
+2. model 自行嘗試
+   1. edge detection + model
+
+待討論
+1. 資料前處理 pipeline
+
+## 5/5 會議記錄
+
+### dirty data 分佈
 > 類別分類如下
 > isnull定義: 分辨不出來，則為isnull
 1. 含非字的線: 32
@@ -11,12 +36,12 @@ esun_fintech
 5. 自行定義:
 6. 自行定義:
 
-### Clean data
+#### Clean data
 
 1. 紀錄dirty data
 2. 改label, isnull
 
-#### assignment
+##### assignment
 1. 將異常的label改成正確的label將原始資料記錄下來，並分類為何異常
 2. 統計異常的數量與紀錄為什麼類型的異常
 
@@ -28,43 +53,6 @@ esun_fintech
 * Kai 50001 - 60000
 * Cheng 60000 - last
 
-## Model 
+### Model 
 1. AI-free
 2. edge detection + model
-
-# 5/12
-
-待完成
-1. clean data
-2. model 自行嘗試
-   1. edge detection + model
-
-待討論
-1. 資料前處理 pipeline
-
-
-# 5/18 會議記錄
-1. 23號之前將clean data number紀錄至train folder內的readme
-2. 自行嘗試model，評估效能
-
-## Label分類
-### [改label]
-* 因為Label錯誤 (eg. 13863、13967)
-* 因為label錯誤且為1.5個字 (eg. 14703、14710)
-### [改成isnull]
-* 因為有2個字   (eg. 15774、15811)
-* 因為只有線條  (eg. 12690、12714)
-* 因為線條遮到  (eg. 14658)
-* 因為字卡到    (eg. 15840、15892)
-* 因為整個空白  (eg. 12201、12284)
-* 因為看不出來是什麼 (eg. 14166(stamp)、14309)
-* 因為紅底沒字  (eg. 12747、14545(stamp))
-* 因為黑底     (eg. 12240、13682)
-### [沒改]
-* 為簡體字     (eg. 12534、12573)
-* 1.5個字      (eg. 13167、13175)
-* 有其他線條   (eg. 13569、13756)
-* 有紅色印章   (eg. 14865、14929)
-* 字有卡到     (eg. 13270、13458)
-* 字體翻轉     (eg. 13687、15201)
-* 彩色背景     (eg. 15493)
