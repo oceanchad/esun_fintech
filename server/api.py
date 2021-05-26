@@ -12,7 +12,7 @@ from flask import jsonify
 import numpy as np
 import torch
 import torchvision.transforms as transforms
-from model import Classifier
+from model import Classifier, SquarePad
 from PIL import Image
 import torch.nn as nn
 import multiprocessing
@@ -65,9 +65,11 @@ def base64_to_binary_for_cv2(image_64_encoded):
 def preprocess(image):
     compose = [
         transforms.ToPILImage(),
-        transforms.Resize((64, 64)),
         transforms.Grayscale(num_output_channels=3),
         transforms.ToTensor(),
+        transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5)),
+        SquarePad(),
+        transforms.Resize((64, 64)),
     ]
     transform = transforms.Compose(compose)
     return transform(image)
