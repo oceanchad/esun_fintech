@@ -5,6 +5,16 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision.transforms as transforms
 
+class SquarePad:
+    def __call__(self, image):
+        c, h, w = image.shape
+        max_wh = np.max([w, h])
+        hp = int((max_wh - w) / 2)
+        vp = int((max_wh - h) / 2)
+        padding = (hp, hp, vp, vp)
+        m = nn.ConstantPad2d(padding, 1)
+        return m(image)
+
 class Classifier(nn.Module):
     def __init__(self):
         super(Classifier, self).__init__()
