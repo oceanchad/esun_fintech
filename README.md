@@ -1,9 +1,16 @@
 # esun_fintech
 
+
 :rocket: rank: 43
 
 
 ## 5/26
+:trophy: [solved] 5/25 1. 2.
+:exclamation: 待解決問題
+1. model accuracy 不夠 :dash:  結果為 0.787 acc
+
+
+## 5/25
 :exclamation: 待解決問題
 
 1. connection fail issue :dash:  近8000筆資料 :point_right: 1058筆connection fail / 6663筆成功 [見log檔](https://docs.google.com/spreadsheets/d/1MOVoaUy45of2n_W1WR_OtxHR-_iFLVQtZrdvdR8Zoqg/edit#gid=244301917)
