@@ -1,7 +1,7 @@
 # esun_fintech
 
 
-:rocket: rank: 43
+:rocket: rank: 34
 
 
 ## 5/26
