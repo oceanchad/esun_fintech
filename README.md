@@ -9,6 +9,7 @@
 
 :exclamation: 待解決問題
 1. model accuracy 不夠 :dash:  結果為 0.787 acc
+2. 觀察圖片與[測試賽資料](https://github.com/oceanchad/esun_fintech/blob/main/temp_data/esun_post_data.json)及[log檔](https://docs.google.com/spreadsheets/d/1x5rkUc5sfFfIBteigiNrYIRiiErYJOAosuZcVKYUjag/edit?usp=sharing)，比對模型輸出
 
 
 ## 5/25
