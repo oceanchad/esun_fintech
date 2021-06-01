@@ -3,6 +3,10 @@
 
 :rocket: rank: 34
 
+## 6/6
+1. 自行測試model
+2. 寫出test api 算f1 score（Luca）
+
 
 ## 5/26
 :trophy: [solved] 5/25 1. 2.
