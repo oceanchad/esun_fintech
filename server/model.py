@@ -22,7 +22,7 @@ class Classifier(nn.Module):
         # torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride, padding)
         # torch.nn.MaxPool2d(kernel_size, stride, padding)
 
-        # input image size: [3, 128, 128]
+        # input image size: [3, 64, 64]
         self.cnn_layers = nn.Sequential(
             nn.Conv2d(3, 64, 3, 1, 1),
             nn.BatchNorm2d(64),
