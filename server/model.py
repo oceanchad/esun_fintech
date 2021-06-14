@@ -22,31 +22,38 @@ class Classifier(nn.Module):
         # torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride, padding)
         # torch.nn.MaxPool2d(kernel_size, stride, padding)
 
-        # input image size: [3, 64, 64]
+        # input image size: [3, 128, 128]
         self.cnn_layers = nn.Sequential(
-            nn.Conv2d(3, 64, 3, 1, 1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(),
-            #nn.Dropout(p=0.2),
+            nn.Conv2d(3, 32, 3, 1, 1),
+            nn.BatchNorm2d(32),
+            #nn.ReLU(),
+            nn.RReLU(0.001, 0.005),
             nn.MaxPool2d(2, 2, 0),
-
+            
+            nn.Conv2d(32, 64, 3, 1, 1),
+            nn.BatchNorm2d(64),
+            #nn.ReLU(),
+            nn.RReLU(0.001, 0.005),
+            nn.MaxPool2d(2, 2, 0),
+            
             nn.Conv2d(64, 128, 3, 1, 1),
             nn.BatchNorm2d(128),
             nn.ReLU(),
             nn.MaxPool2d(2, 2, 0),
-            #nn.Dropout2d(0.2),
+
             nn.Conv2d(128, 256, 3, 1, 1),
             nn.BatchNorm2d(256),
             nn.ReLU(),
-            nn.MaxPool2d(4, 4, 0),
+            nn.MaxPool2d(2, 2, 0),
         )
         self.fc_layers = nn.Sequential(
-            nn.Linear(4096, 512),
+            nn.Linear(256 * 4 * 4, 512),
             nn.BatchNorm1d(512),
+            nn.Dropout(p=0.2),
             nn.ReLU(),
-            #nn.Dropout(p=0.2),
             nn.Linear(512, 256),
             nn.BatchNorm1d(256),
+            nn.Dropout(p=0.2),
             nn.ReLU(),
             nn.Linear(256, 801),
         )
