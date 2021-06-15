@@ -64,11 +64,12 @@ def base64_to_binary_for_cv2(image_64_encoded):
 def preprocess(image):
     compose = [
         transforms.ToPILImage(),
+        transforms.ColorJitter(brightness=(1.05, 1.2), contrast=(1.05, 1.2)),# saturation=(0.9, 1.1)),#, hue=(-0.01, 0.01)),
         transforms.Grayscale(num_output_channels=3),
         transforms.ToTensor(),
-        transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5)),
         SquarePad(),
         transforms.Resize((64, 64)),
+        transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5)),
     ]
     transform = transforms.Compose(compose)
     return transform(image)
