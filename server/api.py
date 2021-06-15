@@ -15,7 +15,6 @@ import torchvision.transforms as transforms
 from model import Classifier, SquarePad
 from PIL import Image
 import torch.nn as nn
-import multiprocessing
 
 app = Flask(__name__)
 
