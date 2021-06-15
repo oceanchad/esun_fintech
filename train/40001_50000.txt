@@ -9998,6 +9998,3 @@
 49998_isnull.jpg
 49999_翠.jpg
 50000_戴.jpg
-list.txt
-新文字文件.bat
-新文字文件.txt
